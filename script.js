@@ -74,20 +74,5 @@ sortByName.addEventListener('change',()=>{
 
 
 
-function pagi(totalNoOfEle){
-    box.innerHTML=null
-    total_D=totalNoOfEle;
-    lim = 6;
-    let aver_Data= Math.ceil(total_D/lim)
-    for(let i = 1;i<=aver_Data;i++){
-        let btnn = document.createElement('button');
-        btnn.textContent=i;
-        btnn.addEventListener('click',function(){
-            fetchData(`https://jsonplaceholder.typicode.com/users?_page=${i}&_limit=${lim}`)
-        })
-        box.append(btnn)
-    }
-}
-
 
 
